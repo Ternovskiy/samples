@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImgComponent } from './img.component';
+import { TodoItemComponent } from './todo-item.component';
 
-describe('ImgComponent', () => {
-  let component: ImgComponent;
-  let fixture: ComponentFixture<ImgComponent>;
+describe('TodoItemComponent', () => {
+  let component: TodoItemComponent;
+  let fixture: ComponentFixture<TodoItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ImgComponent],
+      imports: [TodoItemComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ImgComponent);
+    fixture = TestBed.createComponent(TodoItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
