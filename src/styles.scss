@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+input {
+  height: 1.5rem;
+  border: lightgray solid 1px;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.4rem;
+}
