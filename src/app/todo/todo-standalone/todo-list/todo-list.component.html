@@ -1,7 +1,6 @@
 <input [formControl]="searchControl" placeholder="Search" />
 
 <app-todo-item
-  appShadow
   *ngFor="let item of filteredItems$ | async"
   [item]="item"
 ></app-todo-item>
