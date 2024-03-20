@@ -6,7 +6,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ShadowDirective } from '../shadow.directive';
 
 @NgModule({
-  declarations: [TodoListComponent, TodoItemComponent],
-  imports: [CommonModule, ReactiveFormsModule, ShadowDirective],
+    imports: [CommonModule, ReactiveFormsModule, ShadowDirective, TodoListComponent, TodoItemComponent],
 })
 export class TodoModuleModule2 {}

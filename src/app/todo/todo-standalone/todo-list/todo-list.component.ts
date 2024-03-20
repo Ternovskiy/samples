@@ -1,13 +1,24 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Todo, TodoService } from '../../todo.service';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { map, startWith, switchMap } from 'rxjs';
+import { ShadowDirective } from '../../shadow.directive';
+import { TodoItemComponent } from '../todo-item/todo-item.component';
+import { NgFor, AsyncPipe } from '@angular/common';
 
 @Component({
-  selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrl: './todo-list.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-todo-list',
+    templateUrl: './todo-list.component.html',
+    styleUrl: './todo-list.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [
+        ReactiveFormsModule,
+        NgFor,
+        TodoItemComponent,
+        ShadowDirective,
+        AsyncPipe,
+    ],
 })
 export class TodoListComponent {
   private readonly todoService = inject(TodoService);
