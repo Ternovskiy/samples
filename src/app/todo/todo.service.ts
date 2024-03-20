@@ -42,6 +42,8 @@ export class TodoService {
       status: Status.New,
     },
   ]);
+
+  readonly hasAccess$ = of<boolean>(true);
 }
 
 export interface Todo {
