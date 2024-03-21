@@ -1,3 +1,6 @@
+<div>Standalone</div>
+<br />
+
 <input [formControl]="searchControl" placeholder="Search" />
 
 <app-todo-item *ngFor="let item of filteredItems$ | async" [item]="item" />
