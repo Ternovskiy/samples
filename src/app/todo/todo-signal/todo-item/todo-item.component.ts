@@ -1,6 +1,6 @@
 import {Component, input, Input, model} from '@angular/core';
 import { Status, Todo } from '../../todo.service';
-import { NgSwitch, NgSwitchCase } from '@angular/common';
+
 import { ShadowDirective } from '../../shadow.directive';
 
 @Component({
@@ -8,7 +8,7 @@ import { ShadowDirective } from '../../shadow.directive';
   templateUrl: './todo-item.component.html',
   styleUrl: './todo-item.component.scss',
   standalone: true,
-  imports: [NgSwitch, NgSwitchCase],
+  imports: [],
   hostDirectives: [ShadowDirective],
 })
 export class TodoItemComponent {

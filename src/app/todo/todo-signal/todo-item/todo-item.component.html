@@ -1,7 +1,15 @@
-<div class="status" [ngSwitch]="item().status">
-  <ng-container *ngSwitchCase="Status.New">New</ng-container>
-  <ng-container *ngSwitchCase="Status.Active">Active</ng-container>
-  <ng-container *ngSwitchCase="Status.Completed">Completed</ng-container>
+<div class="status">
+  @switch (item().status) {
+    @case (Status.New) {
+      New
+    }
+    @case (Status.Active) {
+      Active
+    }
+    @case (Status.Completed) {
+      Completed
+    }
+  }
 </div>
 <div>
   {{ item().title }}

@@ -4,7 +4,7 @@ import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { map, startWith } from 'rxjs';
 import { ShadowDirective } from '../../shadow.directive';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
-import { AsyncPipe, NgFor } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -15,12 +15,11 @@ import { ActivatedRoute } from '@angular/router';
   standalone: true,
   imports: [
     ReactiveFormsModule,
-    NgFor,
     TodoItemComponent,
     ShadowDirective,
     AsyncPipe,
-    FormsModule,
-  ],
+    FormsModule
+],
 })
 export class TodoListComponent {
   private readonly activatedRoute = inject(ActivatedRoute);
