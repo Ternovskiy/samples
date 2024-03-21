@@ -1,11 +1,11 @@
 import {ChangeDetectionStrategy, Component, computed, inject, Signal, signal} from '@angular/core';
 import { Todo } from '../../todo.service';
 import {FormControl, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { map, startWith } from 'rxjs';
 import { ShadowDirective } from '../../shadow.directive';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 import { AsyncPipe } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import {LargeContentComponent} from "../large-content/large-content.component";
 
 @Component({
   selector: 'app-todo-list',
@@ -18,8 +18,9 @@ import { ActivatedRoute } from '@angular/router';
     TodoItemComponent,
     ShadowDirective,
     AsyncPipe,
-    FormsModule
-],
+    FormsModule,
+    LargeContentComponent
+  ],
 })
 export class TodoListComponent {
   private readonly activatedRoute = inject(ActivatedRoute);
