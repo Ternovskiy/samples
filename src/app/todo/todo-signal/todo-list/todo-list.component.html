@@ -1,0 +1,6 @@
+<div>Signals</div>
+<br />
+
+<input [ngModel]="''" (ngModelChange)="searchControl.set($event)" placeholder="Search" />
+
+<app-todo-item *ngFor="let item of filteredItems()" [item]="item"/>

@@ -1,0 +1,15 @@
+:host {
+  border: lightgray solid 1px;
+  border-radius: 0.4rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  height: 2rem;
+}
+
+.status {
+  width: 6rem;
+}
